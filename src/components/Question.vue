@@ -9,9 +9,7 @@
 </script>
 <template>
     <div class="question-container">
-        <h1 class="question">
-        {{ question.text }}
-        </h1>
+        <h1 class="question" v-html="question.text"></h1>
     </div>
     <div class="options-container">
         <div
@@ -22,7 +20,7 @@
         >
             <p class="option-label">{{option.label}}</p>
             <div class="option-value">
-                <p>{{option.text}}</p>
+                <p v-html="option.text"></p>
             </div>
         </div>
     </div>
